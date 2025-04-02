@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Webpage</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .header-bg{
+        background-image: url(bg\ .jpg);
+        background-repeat: no-repeat;
+        height: 50em;
+        width: 94.9em;
+        background-size: cover;
+    }
+
+    /* Body Styling */
+    body {
+        font-family: Arial, sans-serif;
+        color: #333;
+       
+    }
+
+    /* Header Styling */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 50px;
+        background-color: #2c3e5062;
+        color: white;
+        position: sticky;
+        top: 0;
+    }
+
+    header .logo h1 {
+        font-size: 1.8rem;
+    }
+
+    header nav ul {
+        list-style: none;
+        display: flex;
+    }
+
+    header nav ul li {
+        margin-left: 20px;
+    }
+
+    header nav ul li a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+    }
+
+    header nav ul li a:hover {
+        color: #f39c12;
+    }
+
+
+
+    /* main content */
+    .main {
+        height: 600px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: rgb(0, 0, 0);
+    }
+
+    .main h2 {
+        font-size: 5rem;
+    }
+
+    .main p {
+        font-size: 2rem;
+    }
+
+    /* Cards*/
+    .cards {
+        padding: 50px;
+        text-align: center;
+        height: 600px;
+    }
+
+    .cards h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+
+    .card-container {
+        display: flex;
+        justify-content: space-around;
+        gap: 20px;
+    }
+
+    .card {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .card img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
+
+    .card h3 {
+        margin-top: 10px;
+        font-size: 1.5rem;
+    }
+
+    .card p {
+        font-size: 1rem;
+        color: #555;
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    /* footer*/
+    footer {
+        background-color: #2c3e50;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        margin-top: 50px;
+    }
+
+
+
+    /* button */
+/* button {
+ position: relative;
+ display: inline-block;
+ cursor: pointer;
+ outline: none;
+ border: 0;
+ vertical-align: middle;
+ text-decoration: none;
+ font-family: inherit;
+ font-size: 15px;
+}
+
+button.learn-more {
+ font-weight: 600;
+ color: #382b22;
+ text-transform: uppercase;
+ padding: 1.25em 2em;
+ background: #fff0f0;
+ border: 2px solid #b18597;
+ border-radius: 0.75em;
+ -webkit-transform-style: preserve-3d;
+ transform-style: preserve-3d;
+ -webkit-transition: background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+ transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+
+button.learn-more::before {
+ position: absolute;
+ content: '';
+ width: 100%;
+ height: 100%;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background: #f9c4d2;
+ border-radius: inherit;
+ -webkit-box-shadow: 0 0 0 2px #b18597, 0 0.625em 0 0 #ffe3e2;
+ box-shadow: 0 0 0 2px #b18597, 0 0.625em 0 0 #ffe3e2;
+ -webkit-transform: translate3d(0, 0.75em, -1em);
+ transform: translate3d(0, 0.75em, -1em);
+ transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+
+button.learn-more:hover {
+ background: #ffe9e9;
+ -webkit-transform: translate(0, 0.25em);
+ transform: translate(0, 0.25em);
+}
+
+button.learn-more:hover::before {
+ -webkit-box-shadow: 0 0 0 2px #b18597, 0 0.5em 0 0 #ffe3e2;
+ box-shadow: 0 0 0 2px #b18597, 0 0.5em 0 0 #ffe3e2;
+ -webkit-transform: translate3d(0, 0.5em, -1em);
+ transform: translate3d(0, 0.5em, -1em);
+}
+
+button.learn-more:active {
+ background: #ffe9e9;
+ -webkit-transform: translate(0em, 0.75em);
+ transform: translate(0em, 0.75em);
+}
+
+button.learn-more:active::before {
+ -webkit-box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
+ box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
+ -webkit-transform: translate3d(0, 0, -1em);
+ transform: translate3d(0, 0, -1em); 
+/* } */
+</style>
+
+<body>
+    <div class="header-bg">
+    <header>
+        <div class="logo">
+            <h1>KnowledgeNest</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main">
+        <div class="main-content">
+            <h2>Welcome to KnowledgeNest</h2>
+            <p>Knowledge Nest is not just an online learning platform; it's a dynamic community where knowledge meets innovation. We understand that education is the key to personal and professional growth, and we're here to unlock that potential for everyone. To democratize education by providing a platform that transcends geographical boundaries, making high-quality learning resources available anywhere. We're not just adapting to change; we're driving it. Join us on the journey of continuous learning and skill development.</p>
+        </div>
+    </div>
+</div>
+    <div id="courses" class="cards">
+        <h2>Our Courses</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="./science" alt="Science">
+                <h3>Science</h3>
+                <p>Explore the wonders of physics, chemistry, and biology.</p>
+                <button class="learn-more">Learn More</button>
+            </div>
+            <div class="card">
+                <img src="./math" alt="Mathematics">
+                <h3>Mathematics</h3>
+                <p>Master the art of numbers, equations, and problem-solving.</p>
+                <button class="learn-more">Learn More</button>
+            </div>
+            <div class="card">
+                <img src="./history" alt="History">
+                <h3>History</h3>
+                <p>Dive into the past and learn about historical events and cultures.</p>
+                <button class="learn-more">Learn More</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact" class="contact">
+        <h2 style="text-align: center; font-size: 24px;">Contact Us</h2>
+        <form action="#" method="post" style="margin: 20px; padding: 10px; border: 1px solid black;">
+            <div style="margin-bottom: 10px;">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" style="display: block; width: 300px;">
+            </div>
+            <div style="margin-bottom: 10px;">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" style="display: block; width: 300px;">
+            </div>
+            <div style="margin-bottom: 10px;">
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" style="display: block; width: 300px;">
+            </div>
+            <div style="margin-bottom: 10px;">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" style="display: block; width: 300px;"></textarea>
+            </div>
+            <button type="submit"
+                style="padding: 5px 10px; background-color: lightgray; border: 1px solid black;">Submit</button>
+        </form>
+    </div>
+
+
+    <footer>
+        <p> 2025 KnowledgeNest. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>
